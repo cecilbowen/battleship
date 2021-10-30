@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+  <link rel="stylesheet" href="http://cdn.muicss.com/mui-0.9.43/css/mui.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="http://cdn.muicss.com/mui-0.9.43/js/mui.min.js"></script>
+  </head>
+ 
+  <body>
+    <div class="page">
+      <div id="settings" class="mui-container-fluid mui-panel">
+        <div class="mui--text-display2">Battleship</div><br/>
+        <div class="mui-row">
+          <div class="mui-col-md-6">
+            <div class="mui-textfield mui-textfield--float-label">
+              <input id="name" type="text" value="Player" title="Name">
+   	       <label>Name</label>
+            </div>
+          </div>
+          <div class="mui-col-md-6">
+            <div class="mui-select">
+              <select id="difficulty" title="Difficulty">
+                <option value="Easy">Easy</option>
+      	      <option value="Medium" selected>Medium</option>
+                <option value="Hard">Hard</option>
+                <option value="Impossible">Impossible</option>
+              </select>
+              <label>Difficulty</label>
+            </div>
+ 	     </div>
+        </div>
+ 
+        <div class="mui-row">
+          <div class="mui-col-md-6">
+            <div class="mui-select">
+              <select id="boardSize" title="Board Size">
+                <option selected value="10">10 x 10 (Classic)</option>
+                <option value="15">15 x 15</option>
+                <option value="26">26 x 26</option>
+              </select>
+              <label>Board Size</label>
+            </div>
+          </div>
+          <div class="mui-col-md-6">
+      	  <button class="mui-btn mui-btn--raised" id="sinkButton">
+              <span id="sinkSpan">Announce Sunken Ship Names</span>
+              <i id="sinkIcon" class="pointer material-icons icon-fix">directions_boat</i>
+            </button>
+           
+          </div>
+        </div>
+ 
+        <div class="mui-row">
+          <div class="mui-col-md-1">
+            <button class="mui-btn mui-btn--raised mui-btn--primary" id="start">START</button>
+          </div>
+          <div class="mui-col-md-1">
+     	 </div>
+        </div>
+ 
+       
+      </div>
+ 
+      <div id="moves" class="moves" style="visibility: hidden">
+        <!-- <div class="mui--text-display1">Log</div><br/> -->
+        <div class="log mui-panel" title="Player Log" id="log"></div>
+      </div>
+      <div id="board" class="board"></div>
+      <i id="volume" class="pointer material-icons pad" title="Volume">volume_off</i>
+      <button class="mui-btn mui-btn--raised mui-btn--primary hide"
+        id="newGame">
+    	New Game
+      </button>
+ 
+      <button class="mui-btn mui-btn--raised hide" id="checkBoard">
+        <i id="sinkIcon" class="pointer material-icons icon-fix">cached</i>
+        <span id="checkBoardSpan">Opponent Board</span>
+      </button>
+ 
+      <div id="sounds">
+        <audio id="soundMiss" preload="auto" src="https://freesound.org/data/previews/479/479450_5103872-lq.mp3" />
+        <audio id="soundHit" preload="auto" src="https://freesound.org/data/previews/218/218721_600352-lq.mp3" />
+        <audio id="soundSink" preload="auto" src="https://freesound.org/data/previews/388/388528_6823432-lq.mp3" />
+        <audio id="soundWin" preload="auto" src="https://freesound.org/data/previews/413/413204_2559515-lq.mp3" />
+        <audio id="soundLose" preload="auto" src="https://freesound.org/data/previews/362/362204_6629901-lq.mp3" />
+      </div>
+    </div>
+  </body>
+ 
+</html>
